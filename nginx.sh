@@ -248,7 +248,7 @@ show_openresty_info() {
         else
             echo -e "运行状态: ${RED}未运行${NC}"
         fi
-        echo -e "项目地址: ${BLUE}https://github.com/openresty/openresty${NC}"
+        echo -e "项目地址: ${BLUE}https://github.com/Thinking-Art/OpenResty-sh${NC}"
     else
         echo -e "${RED}OpenResty未安装${NC}"
     fi
