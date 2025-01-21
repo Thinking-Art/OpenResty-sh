@@ -1,5 +1,8 @@
 # OpenResty 管理脚本使用说明
 
+  脚本主要是为了方便管理OpenResty，本意只满足基本的建站需求，对低配服务器友好，安装运维面板又觉得没必要，
+  只捣鼓了Ubuntu，其他系统未测试，因为Debian/Ubuntu系统都差不多，欢迎测试反馈。
+
 ## 系统要求
 
 - 操作系统：Ubuntu/Debian
@@ -10,7 +13,7 @@
 ### 一键安装运行
 
 ```bash
-wget -O nginx.sh https://raw.githubusercontent.com/yourusername/openresty-manager/main/nginx.sh && chmod +x nginx.sh && sudo ./nginx.sh
+wget -O nginx.sh https://raw.githubusercontent.com/Thinking-Art/OpenResty-sh/refs/heads/main/nginx.sh && chmod +x nginx.sh && sudo ./nginx.sh
 ```
 
 ## 功能特点
@@ -106,43 +109,9 @@ wget -O nginx.sh https://raw.githubusercontent.com/yourusername/openresty-manage
 │   └── logs/
 └── backup/
 ```
-
-## 配置文件说明
-
-### 1. nginx.conf
-主配置文件，包含全局设置
-
-### 2. sites-available
-存放所有站点配置文件
-
-### 3. sites-enabled
-已启用的站点配置软链接
-
-### 4. ssl
-存放SSL证书文件
-
 ## 日志文件
 
 - 访问日志：\`/usr/local/openresty/nginx/logs/access.log\`
 - 错误日志：\`/usr/local/openresty/nginx/logs/error.log\`
 - 站点日志：\`/usr/local/openresty/nginx/logs/站点名称_access.log\`
 
-## 安全建议
-
-1. 定期备份配置文件
-2. 及时更新系统和OpenResty版本
-3. 使用强密码和密钥
-4. 定期检查日志文件
-5. 限制关键目录访问权限
-
-## 更新记录
-
-### v1.0
-- 初始版本发布
-- 基础功能实现
-- 支持Ubuntu系统
-欢迎提交Issue和Pull Request来改进脚本。
-
-## 联系方式
-
-如有问题请提交Issue或发送邮件至：your@email.com 
